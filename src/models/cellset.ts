@@ -1,5 +1,5 @@
 import { CubeResponse } from './Cube'
-import { ElementResponse } from './element'
+import { ElementResponse } from './Element'
 import { HierarchyResponse } from './hierarchy'
 
 interface CellsetResponse {

@@ -1,5 +1,5 @@
 import { RestService } from './rest-service'
-import { Cube, CubeResponse, CubesResponse } from '../models/cube'
+import { Cube, CubeResponse, CubesResponse } from '../models/Cube'
 import { ViewService } from './view-service'
 import { MinimumVersion } from '../utils/decorators'
 import { FedCellDescriptor, RuleSyntaxError } from '../models/misc'
