@@ -96,6 +96,32 @@ class ProcessService {
   }
 
   /**
+   * Fetch all model process names from TM1
+   *
+   * @returns {string[]} An array of processs names
+   */
+
+  async getAllModelNames(): Promise<string[]> {
+    const response = await this.http.GET<ProcessesResponse>(
+      "/api/v1/Processes?$select=Name?$select=Name&$filter=not startswith(Name, '}')"
+    )
+    return response.data.value.map((p: ProcessResponse) => p.Name)
+  }
+
+  /**
+   * Fetch all control process names from TM1
+   *
+   * @returns {string[]} An array of processs names
+   */
+
+  async getAllControlNames(): Promise<string[]> {
+    const response = await this.http.GET<ProcessesResponse>(
+      "/api/v1/Processes?$select=Name?$select=Name&$filter=startswith(Name, '}') eq true"
+    )
+    return response.data.value.map((p: ProcessResponse) => p.Name)
+  }
+
+  /**
    * Create a process in TM1
    *
    * @param {Process} process The process to create. An instance of the `Process` model
