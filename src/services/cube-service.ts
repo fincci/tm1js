@@ -71,11 +71,11 @@ class CubeService {
 
   async getAllModelNames(): Promise<string[]> {
     const response = await this.http.GET<CubesResponse>(
-      "/api/v1/Cubes?$select=Name?$select=Name&$filter=not startswith(Name, '}')"
+      "/api/v1/Cubes?$select=Name&$filter=not startswith(Name, '}')"
     )
     return response.data.value.map((cube: { Name: string }) => cube.Name)
   }
-  
+
   /**
    * Fetch the name of all control cubes from TM1
    *
@@ -84,7 +84,7 @@ class CubeService {
 
   async getAllControlNames(): Promise<string[]> {
     const response = await this.http.GET<CubesResponse>(
-      "/api/v1/Cubes?$select=Name?$select=Name&$filter=startswith(Name, '}') eq true"
+      "/api/v1/Cubes?$select=Name&$filter=startswith(Name, '}') eq true"
     )
     return response.data.value.map((cube: { Name: string }) => cube.Name)
   }
