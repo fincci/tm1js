@@ -18,7 +18,7 @@ class CubeService {
     this.http = http
     this.views = new ViewService(http)
     this.cells = new CellService(http)
-  }
+  }git bran
 
   /**
    * Fetch a cube and its dimensions from TM1
