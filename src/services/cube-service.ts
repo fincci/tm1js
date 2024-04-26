@@ -18,7 +18,7 @@ class CubeService {
     this.http = http
     this.views = new ViewService(http)
     this.cells = new CellService(http)
-  }git bran
+  }
 
   /**
    * Fetch a cube and its dimensions from TM1
@@ -50,7 +50,7 @@ class CubeService {
   }
 
   /**
-   * Fetch the name of all cubves from TM1
+   * Fetch the name of all cubes from TM1
    *
    * @returns An array of cube names
    */
@@ -58,6 +58,33 @@ class CubeService {
   async getAllNames(): Promise<string[]> {
     const response = await this.http.GET<CubesResponse>(
       '/api/v1/Cubes?$select=Name'
+    )
+    return response.data.value.map((cube: { Name: string }) => cube.Name)
+  }
+
+  
+  /**
+   * Fetch the name of all model cubes from TM1
+   *
+   * @returns An array of cube names
+   */
+
+  async getAllModelNames(): Promise<string[]> {
+    const response = await this.http.GET<CubesResponse>(
+      "/api/v1/Cubes?$select=Name?$select=Name&$filter=not startswith(Name, '}')"
+    )
+    return response.data.value.map((cube: { Name: string }) => cube.Name)
+  }
+  
+  /**
+   * Fetch the name of all control cubes from TM1
+   *
+   * @returns An array of cube names
+   */
+
+  async getAllControlNames(): Promise<string[]> {
+    const response = await this.http.GET<CubesResponse>(
+      "/api/v1/Cubes?$select=Name?$select=Name&$filter=startswith(Name, '}') eq true"
     )
     return response.data.value.map((cube: { Name: string }) => cube.Name)
   }
