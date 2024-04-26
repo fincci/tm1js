@@ -58,12 +58,42 @@ class DimensionService {
   /**
    * Fetch all dimension names from TM1
    *
-   * @returns An array of dimension naems
+   * @returns An array of dimension names
    */
 
   async getAllNames(): Promise<string[]> {
     const response = await this.http.GET<DimensionsResponse>(
       '/api/v1/Dimensions?$select=Name'
+    )
+    return response.data.value.map(
+      (dimension: DimensionResponse) => dimension.Name
+    )
+  }
+
+  /**
+   * Fetch all model dimension names from TM1
+   *
+   * @returns An array of dimension names
+   */
+
+  async getAllModelNames(): Promise<string[]> {
+    const response = await this.http.GET<DimensionsResponse>(
+      "/api/v1/Dimensions?$select=Name&$filter=not startswith(Name, '}')"
+    )
+    return response.data.value.map(
+      (dimension: DimensionResponse) => dimension.Name
+    )
+  }
+
+  /**
+   * Fetch all control dimension names from TM1
+   *
+   * @returns An array of dimension names
+   */
+
+  async getAllControlNames(): Promise<string[]> {
+    const response = await this.http.GET<DimensionsResponse>(
+      "/api/v1/Dimensions?$select=Name&$filter=startswith(Name, '}') eq true"
     )
     return response.data.value.map(
       (dimension: DimensionResponse) => dimension.Name
