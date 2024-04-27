@@ -103,7 +103,7 @@ class ProcessService {
 
   async getAllModelNames(): Promise<string[]> {
     const response = await this.http.GET<ProcessesResponse>(
-      "/api/v1/Processes?$select=Name$filter=not startswith(Name, '}')"
+      "/api/v1/Processes?$select=Name&$filter=not startswith(Name, '}')"
     )
     return response.data.value.map((p: ProcessResponse) => p.Name)
   }
