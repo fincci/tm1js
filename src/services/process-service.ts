@@ -1,4 +1,4 @@
-import { ProcessExecuteResult, ProcessSyntaxError } from '../models/misc'
+import { ProcessExecuteResult, ProcessSyntaxError } from '../models/Misc'
 import {
   Process,
   ProcessesResponse,

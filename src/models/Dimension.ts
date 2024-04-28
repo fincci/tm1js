@@ -1,5 +1,5 @@
 import { caseAndSpaceInsensitiveEquals } from '../utils/helpers'
-import { Hierarchy, HierarchyResponse } from './hierarchy'
+import { Hierarchy, HierarchyResponse } from './Hierarchy'
 
 class Dimension {
   public name: string

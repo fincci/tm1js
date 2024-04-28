@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Cube } from './cube'
-import { HierarchyElement } from './element'
+import { Cube } from './Cube'
+import { HierarchyElement } from './Element'
 
 interface RuleSyntaxError {
   LineNumber: number

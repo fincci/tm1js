@@ -1,6 +1,6 @@
 import { CubeResponse } from './Cube'
 import { ElementResponse } from './Element'
-import { HierarchyResponse } from './hierarchy'
+import { HierarchyResponse } from './Hierarchy'
 
 interface CellsetResponse {
   ID: string
