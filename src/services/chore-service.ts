@@ -3,7 +3,7 @@ import {
   ChoreResponse,
   ChoresResponse,
   ChoreTask
-} from '../models/chore'
+} from '../models/Chore'
 import { RestService } from './rest-service'
 import { fixedEncodeURIComponent } from '../utils/helpers'
 

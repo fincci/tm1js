@@ -5,7 +5,7 @@ import {
   ElementAttribute,
   AttributeTypeString,
   ElementAttributeResponse
-} from './element-attribute'
+} from './Element-attribute'
 import { TupleMap } from '../utils/tuple-map'
 import { CaseAndSpaceInsensitiveMap } from '../utils/case-and-space-insensitive-map'
 import { caseAndSpaceInsensitiveEquals } from '../utils/helpers'

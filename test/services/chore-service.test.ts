@@ -5,7 +5,7 @@ import {
   ChoreFrequency,
   ChoreStartTime,
   ChoreTask
-} from '../../src/models/chore'
+} from '../../src/models/Chore'
 import { Process } from '../../src/models/process'
 
 describe('ChoreService', () => {

@@ -3,7 +3,7 @@ import { RemoveCellset } from '../utils/decorators'
 import { CubeService } from './cube-service'
 import { RestService } from './rest-service'
 import { fixedEncodeURIComponent } from '../utils/helpers'
-import { CellResponse, CellsetResponse, CellValue } from '../models/cellset'
+import { CellResponse, CellsetResponse, CellValue } from '../models/Cellset'
 import { AxiosResponse } from 'axios'
 
 /**

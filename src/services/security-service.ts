@@ -1,5 +1,5 @@
-import { Group, GroupResponse, GroupsResponse } from '../models/group'
-import { User, UserResponse, UsersResponse } from '../models/user'
+import { Group, GroupResponse, GroupsResponse } from '../models/Group'
+import { User, UserResponse, UsersResponse } from '../models/User'
 import { fixedEncodeURIComponent } from '../utils/helpers'
 import { RestService } from './rest-service'
 
