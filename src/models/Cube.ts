@@ -1,4 +1,4 @@
-import { DimensionResponse } from './dimension'
+import { DimensionResponse } from './Dimension'
 
 class Cube {
   public name: string

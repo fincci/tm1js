@@ -1,5 +1,5 @@
-import { ElementResponse } from './element'
-import { Subset, SubsetResponse } from './subset'
+import { ElementResponse } from './Element'
+import { Subset, SubsetResponse } from './Subset'
 
 class ViewAxisSelection {
   public subset: Subset

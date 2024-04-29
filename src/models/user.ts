@@ -1,5 +1,5 @@
 import CaseAndSpaceInsensitiveSet from '../utils/case-and-space-insensitive-set'
-import { GroupResponse } from './group'
+import { GroupResponse } from './Group'
 
 class User {
   public name: string

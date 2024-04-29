@@ -1,5 +1,5 @@
 import { ElementResponse } from './Element'
-import { HierarchyResponse } from './hierarchy'
+import { HierarchyResponse } from './Hierarchy'
 
 class Subset {
   public name: string

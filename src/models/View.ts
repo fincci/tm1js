@@ -3,7 +3,7 @@ import {
   ViewAxisSelectionResponse,
   ViewAxisTitle,
   ViewAxisTitleResponse
-} from './view-axis'
+} from './View-axis'
 import { Subset } from './subset'
 
 enum ViewType {

@@ -1,15 +1,15 @@
-import { Edge, EdgeResponse } from './edge'
-import { Subset, SubsetResponse } from './subset'
-import { HierarchyElement, ElementTypeString, ElementResponse } from './element'
+import { Edge, EdgeResponse } from './Edge'
+import { Subset, SubsetResponse } from './Subset'
+import { HierarchyElement, ElementTypeString, ElementResponse } from './Element'
 import {
   ElementAttribute,
   AttributeTypeString,
   ElementAttributeResponse
-} from './element-attribute'
+} from './Element-attribute'
 import { TupleMap } from '../utils/tuple-map'
 import { CaseAndSpaceInsensitiveMap } from '../utils/case-and-space-insensitive-map'
 import { caseAndSpaceInsensitiveEquals } from '../utils/helpers'
-import { DimensionResponse } from './dimension'
+import { DimensionResponse } from './Dimension'
 
 const LEAVES_HIERARCHY = 'Leaves'
 

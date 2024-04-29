@@ -1,4 +1,4 @@
-import { User, UserResponse } from './user'
+import { User, UserResponse } from './User'
 
 class Group {
   public name: string
