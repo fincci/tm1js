@@ -122,6 +122,33 @@ class ProcessService {
   }
 
   /**
+   * Fetch all processes and their properties from TM1
+   *
+   * @returns {Process[]} An array of the `Process` model
+   */
+
+  async getModelProcess(): Promise<Process[]> {
+    const response = await this.http.GET<ProcessesResponse>(
+      "/api/v1/Processes?&$filter=not startswith(Name, '}')"
+    )
+    return response.data.value.map((p: ProcessResponse) => Process.fromJson(p))
+  }
+
+  /**
+   * Fetch all processes and their properties from TM1
+   *
+   * @returns {Process[]} An array of the `Process` model
+   */
+
+  async getControlProcess(): Promise<Process[]> {
+    const response = await this.http.GET<ProcessesResponse>(
+      "/api/v1/Processes?&$filter=startswith(Name, '}')"
+    )
+    return response.data.value.map((p: ProcessResponse) => Process.fromJson(p))
+  }
+
+
+  /**
    * Create a process in TM1
    *
    * @param {Process} process The process to create. An instance of the `Process` model
