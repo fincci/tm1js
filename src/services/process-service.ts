@@ -4,7 +4,7 @@ import {
   ProcessesResponse,
   ProcessParameter,
   ProcessResponse
-} from '../models/process'
+} from '../models/Process'
 import { RestService } from './rest-service'
 import { v4 as uuid } from 'uuid'
 import { MinimumVersion } from '../utils/decorators'
