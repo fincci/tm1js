@@ -122,9 +122,9 @@ class ProcessService {
   }
 
   /**
-   * Fetch all processes and their properties from TM1
+   * Fetch all model processes and their properties from TM1
    *
-   * @returns {Process[]} An array of the `Process` model
+   * @returns {Process[]} An array of the `Process`
    */
 
   async getModelProcess(): Promise<Process[]> {
@@ -135,7 +135,7 @@ class ProcessService {
   }
 
   /**
-   * Fetch all processes and their properties from TM1
+   * Fetch all control processes and their properties from TM1
    *
    * @returns {Process[]} An array of the `Process` model
    */
