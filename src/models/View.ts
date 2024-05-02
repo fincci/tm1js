@@ -4,7 +4,7 @@ import {
   ViewAxisTitle,
   ViewAxisTitleResponse
 } from './View-axis'
-import { Subset } from './subset'
+import { Subset } from './Subset'
 
 enum ViewType {
   NATIVE = 'ibm.tm1.api.v1.NativeView',

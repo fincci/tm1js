@@ -3,7 +3,7 @@ import {
   Dimension,
   DimensionResponse,
   DimensionsResponse
-} from '../models/dimension'
+} from '../models/Dimension'
 import { HierarchyService } from './hierarchy-service'
 import {
   caseAndSpaceInsensitiveEquals,

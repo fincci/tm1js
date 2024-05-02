@@ -2,7 +2,7 @@ import {
   HierarchiesResponse,
   Hierarchy,
   HierarchyResponse
-} from '../models/hierarchy'
+} from '../models/Hierarchy'
 import { ElementService } from './element-service'
 import { RestService } from './rest-service'
 import { SubsetService } from './subset-service'

@@ -2,7 +2,7 @@ import {
   ElementResponse,
   ElementsResponse,
   HierarchyElement
-} from '../models/element'
+} from '../models/Element'
 import {
   ElementAttribute,
   ElementAttributeResponse,

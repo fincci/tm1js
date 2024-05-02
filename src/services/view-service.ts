@@ -7,7 +7,7 @@ import {
   MDXViewResponse,
   ViewsResponse,
   isMDXView
-} from '../models/view'
+} from '../models/View'
 import { fixedEncodeURIComponent } from '../utils/helpers'
 
 /** Service to manage views in TM1 */

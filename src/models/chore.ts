@@ -1,4 +1,4 @@
-import { ProcessResponse } from './process'
+import { ProcessResponse } from './Process'
 
 class Chore {
   public name: string
