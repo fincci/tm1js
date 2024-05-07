@@ -186,6 +186,22 @@ class CubeService {
   }
 
   /**
+   * Update if exists else create a rule off a cube from TM1 Server
+   *
+   * @param {string} cubeName The name of the cube for which rules should be create or update
+   * @param {string} rule The rule content
+   * @returns
+   */
+
+  async update_or_create_rule(cubeName: string, rule: string): Promise<Response> {
+    const response = await this.http.PATCH(
+      `/api/v1/Cubes('${fixedEncodeURIComponent(cubeName)}')`,
+      {"Rules": rule}
+    )
+    return response.data
+  }
+
+  /**
    * Check if a cell is fed
    *
    * @param {string} cubeName The name of the cube
