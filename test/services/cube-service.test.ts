@@ -1,7 +1,7 @@
 import { HierarchyElement } from '../../src/models'
 import { Cube } from '../../src/models/Cube'
-import { Dimension } from '../../src/models/dimension'
-import { Hierarchy } from '../../src/models/hierarchy'
+import { Dimension } from '../../src/models/Dimension'
+import { Hierarchy } from '../../src/models/Hierarchy'
 
 describe('CubeService', () => {
   const prefix = 'TM1ts_test_'

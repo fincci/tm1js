@@ -4,7 +4,7 @@ import {
   ProcessDataSource,
   ProcessParameter,
   ProcessProcedure
-} from '../../src/models/process'
+} from '../../src/models/Process'
 
 describe('ProcessService', () => {
   const prefix = 'TM1ts_test_'

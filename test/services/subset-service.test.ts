@@ -1,7 +1,7 @@
 import { HierarchyElement } from '../../src/models'
-import { Dimension } from '../../src/models/dimension'
-import { Hierarchy } from '../../src/models/hierarchy'
-import { Subset } from '../../src/models/subset'
+import { Dimension } from '../../src/models/Dimension'
+import { Hierarchy } from '../../src/models/Hierarchy'
+import { Subset } from '../../src/models/Subset'
 
 describe('SubsetService', () => {
   const prefix = 'TM1ts_test_'

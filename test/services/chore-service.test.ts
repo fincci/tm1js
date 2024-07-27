@@ -6,7 +6,7 @@ import {
   ChoreStartTime,
   ChoreTask
 } from '../../src/models/Chore'
-import { Process } from '../../src/models/process'
+import { Process } from '../../src/models/Process'
 
 describe('ChoreService', () => {
   const prefix = 'TM1ts_test_'

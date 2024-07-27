@@ -1,8 +1,8 @@
 import { HierarchyElement } from '../../src/models'
-import { Dimension } from '../../src/models/dimension'
-import { Edge } from '../../src/models/edge'
-import { ElementAttribute } from '../../src/models/Element-attribute'
-import { Hierarchy } from '../../src/models/hierarchy'
+import { Dimension } from '../../src/models/Dimension'
+import { Edge } from '../../src/models/Edge'
+import { ElementAttribute } from '../../src/models/ElementAttribute'
+import { Hierarchy } from '../../src/models/Hierarchy'
 
 describe('DimensionService', () => {
   const prefix = 'TM1ts_test_'

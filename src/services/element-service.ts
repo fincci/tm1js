@@ -7,7 +7,7 @@ import {
   ElementAttribute,
   ElementAttributeResponse,
   ElementAttributesResponse
-} from '../models/Element-attribute'
+} from '../models/ElementAttribute'
 import { RestService } from './rest-service'
 import { fixedEncodeURIComponent } from '../utils/helpers'
 
