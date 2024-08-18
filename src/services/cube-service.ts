@@ -5,7 +5,7 @@ import { MinimumVersion } from '../utils/decorators'
 import { FedCellDescriptor, RuleSyntaxError } from '../models/Misc'
 import { CellService } from './cell-service'
 import { fixedEncodeURIComponent } from '../utils/helpers'
-import { DimensionsResponse } from '../models'
+import { Dimension, DimensionsResponse, DimensionResponse } from '../models'
 
 /**
  * Service to handle cube operations in TM1
@@ -165,8 +165,29 @@ class CubeService {
       `/api/v1/Cubes('${fixedEncodeURIComponent(
         cubeName
       )}')/Dimensions?$select=Name`
+      // )}')/Dimensions`
     )
     return response.data.value.map((dim: { Name: string }) => dim.Name)
+    // return response.data.value.map((dim: DimensionResponse) => dim)
+  }
+
+  /**
+   * Get the dimension names for a cube
+   *
+   * @param {string} cubeName The name of the cube
+   * @returns
+   */
+
+  async getDimensions(cubeName: string) {
+    const response = await this.http.GET<DimensionsResponse>(
+      `/api/v1/Cubes('${fixedEncodeURIComponent(
+        cubeName
+      )}')/Dimensions`
+    )
+    return response
+    // return response.data.value.map((dimension: DimensionResponse) =>
+    //   Dimension.fromJson(dimension)
+    // )
   }
 
   /**

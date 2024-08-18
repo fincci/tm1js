@@ -423,9 +423,15 @@ class CellService {
 
   async getCubeDimensionNames(cubeName: string): Promise<string[]> {
     const cubeService = new CubeService(this.http)
-    const dimensions = await cubeService.getDimensionNames(cubeName)
-    return dimensions
+    const dimensionsName = await cubeService.getDimensionNames(cubeName)
+    return dimensionsName
   }
+  // #TODO get dimensions objects
+  // async getCubeDimension(cubeName: string): Promise<string[]> {
+  //   const cubeService = new CubeService(this.http)
+  //   const dimensions = await cubeService.getCubeDimensions(cubeName)
+  //   return dimensions
+  // }
 }
 
 export { CellService }
